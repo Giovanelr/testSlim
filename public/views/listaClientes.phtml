@@ -1,0 +1,24 @@
+<h1>Clientes</h1>
+
+<p><a href="/ticket/new">Novo Cliente</a></p>
+
+<table class="pure-table">
+    <tr>
+        <th>ID</th>
+        <th>Cliente</th>
+        <th></th>
+    </tr>
+
+<?php 
+foreach ($listaClientes as $cliente): ?>
+
+    <tr>
+        <td><?php echo $cliente['id']; ?></td>
+        <td><?php echo $cliente['nome']; ?></td>
+        <td>
+            <a href="/cliente/<?php echo $cliente['id']; ?>/contatos">Contatos</a>
+        </td>
+    </tr>
+
+<?php endforeach; ?>
+</table>
