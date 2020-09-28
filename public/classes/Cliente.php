@@ -10,7 +10,7 @@ class Cliente{
 		
 		$banco = New Banco();
 		$banco->begin();
-		$banco->exec($sql, $paramsDb);
+		$banco->exec($sql);
 
 		$contatos = json_decode($params['contatos'], true);
 
